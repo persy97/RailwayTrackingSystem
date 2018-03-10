@@ -1,0 +1,12 @@
+<html>
+<head><title>Check PNR Status</title></head>
+<body>
+<center>
+<form method="POST" action="/pnrstatus">
+     {% csrf_token %}
+<input type="text" name="pnr"><br><br>
+<button>Check PNR Status</button>
+</form>
+</center>
+</body>
+</html>
