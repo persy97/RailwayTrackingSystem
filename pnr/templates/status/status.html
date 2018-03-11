@@ -31,7 +31,7 @@
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Spot Your Train</a>
+          <a class="dropdown-item" href="/spot">Spot Your Train</a>
           <a class="dropdown-item" href="#">Check Availability</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Advertise With Us</a>
@@ -41,15 +41,17 @@
   </div>
 </nav>
 <body>
+
+<br><br>
 <div class="container">
     <h1>{{json_object.train.name}} runs on :</h1>
 
-<table class="table table-bordered table-dark">
+<table class="table table-bordered table-dark col-md-6 col-sm-1 col-lg-12">
   <tbody>
   {% for i in json_object.train.days %}
             {% if i.runs == "Y" %}
     <tr>
-       <td>{{ i.code }} {{ departure }}</td>
+       <td>{{ i.code }} </td>
     </tr>
   {% endif %}
         {% endfor %}

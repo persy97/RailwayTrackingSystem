@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'spot',
     'pnr',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -40,9 +40,28 @@
     </ul>
   </div>
 </nav>
+    <center>
+        <br><br><br>
+<form method="POST" action="/spottrain/">
+    {% csrf_token %}
+  <div class="form-group col-md-4">
+    <label for="exampleInputEmail1">Please Enter the Train Number </label>
+    <input type="text" class="form-control col-xs-1" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Train Number" name="trainno">
+ </br>
+      <select id="inputState" class="form-control" name="date">
+        <option selected>Choose Start Date of the Train</option>
+        <option value="{{ today }}">{{ today }} (Today)</option>
+          <option value="{{ yesterday }}">{{ yesterday }} (Yesterday)</option>
+          <option value="{{ dby }}">{{ dby }} (Ereyesterday)</option>
+          <option value="{{ ddby }}">{{ ddby }} (Day Before Ereyesterday)</option>
+      </select>
+    </div>
+  <button type="submit" class="btn btn-primary">Spot Your Train</button>
+</form>
 
 
 
+</center>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

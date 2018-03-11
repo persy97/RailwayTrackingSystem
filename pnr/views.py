@@ -12,10 +12,8 @@ def pnr(request):
 def detail(request):
     a = requests.get('https://api.railwayapi.com/v2/route/train/'+request.POST['pnr']+'/apikey/9fk8l56ysg/')
     json_object =a.json()
-    dep = json_object.route[0].schdep
     context = {
-        'json_object': json_object,
-        'departure': dep
+        'json_object': json_object
     }
     return render(request, 'status/status.html', context)
 
