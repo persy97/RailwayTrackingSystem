@@ -10,7 +10,7 @@ def pnr(request):
 
 
 def detail(request):
-    a = requests.get('https://api.railwayapi.com/v2/route/train/'+request.POST['pnr']+'/apikey/9fk8l56ysg/')
+    a = requests.get('https://api.railwayapi.com/v2/route/train/'+request.POST['pnr']+'/apikey/#Enter You API Key/')
     json_object =a.json()
     context = {
         'json_object': json_object
